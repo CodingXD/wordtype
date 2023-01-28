@@ -46,19 +46,27 @@ export default function Insights() {
               <div className="grid md:grid-cols-4 grid-cols-2 gap-3 p-4">
                 <div className="flex flex-col space-y-3 items-center border hover:border-2 py-8">
                   <p className="mb-0 font-bold">NOUNS</p>
-                  <p className="mb-0">{nouns}</p>
+                  <p className="mb-0">
+                    {nouns} ({Math.round((nouns / sentences) * 100)}%)
+                  </p>
                 </div>
                 <div className="flex flex-col space-y-3 items-center border hover:border-2 py-8">
                   <p className="mb-0 font-bold">PRONOUNS</p>
-                  <p className="mb-0">{pronouns}</p>
+                  <p className="mb-0">
+                    {pronouns} ({Math.round((pronouns / sentences) * 100)}%)
+                  </p>
                 </div>
                 <div className="flex flex-col space-y-3 items-center border hover:border-2 py-8">
                   <p className="mb-0 font-bold">ADJECTIVES</p>
-                  <p className="mb-0">{adjectives}</p>
+                  <p className="mb-0">
+                    {adjectives} ({Math.round((adjectives / sentences) * 100)}%)
+                  </p>
                 </div>
                 <div className="flex flex-col space-y-3 items-center border hover:border-2 py-8">
                   <p className="mb-0 font-bold">ADVERBS</p>
-                  <p className="mb-0">{adverbs}</p>
+                  <p className="mb-0">
+                    {adverbs} ({Math.round((adverbs / sentences) * 100)}%)
+                  </p>
                 </div>
               </div>
               <Insight id={_id} totalItems={sentences} />
